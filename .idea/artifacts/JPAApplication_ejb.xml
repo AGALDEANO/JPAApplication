@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="JPAApplication:ejb">
+    <output-path>C:/wildfly-8.2.0.Final/standalone/deployments</output-path>
+    <root id="archive" name="JPAApplication_ejb.jar">
+      <element id="artifact" artifact-name="JPAApplication:ejb exploded" />
+    </root>
+  </artifact>
+</component>
