@@ -21,8 +21,13 @@
     </facet>
     <facet type="ejb" name="EJB">
       <configuration>
+        <descriptors>
+          <deploymentDescriptor name="ejb-jar.xml" url="file://$MODULE_DIR$/META-INF/ejb-jar.xml" />
+          <deploymentDescriptor name="jboss.xml" url="file://$MODULE_DIR$/META-INF/jboss.xml" />
+        </descriptors>
         <ejbRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
         </ejbRoots>
       </configuration>
     </facet>
@@ -41,10 +46,9 @@
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="application" />
     <orderEntry type="library" name="Spring-4.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Spring Data JPA-1.3.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.persistence:persistence-api:1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.35" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.persistence:persistence-api:1.0.2" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: mysql:mysql-connector-java:5.1.35" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.persistence:persistence-api:1.0.2" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">

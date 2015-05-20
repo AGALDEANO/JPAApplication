@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
-    <persistence-unit name="persistenceUnit">
+    <persistence-unit name="JPACerisaie" transaction-type="JTA">
+        <jta-data-source>java:/DSCerisaie</jta-data-source>
         <class>dao.Activite</class>
         <class>dao.Client</class>
         <class>dao.Emplacement</class>
@@ -9,10 +10,7 @@
         <class>dao.Sport</class>
         <class>dao.TypeEmplacement</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cerisaie"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.username"/>
-            <property name="hibernate.connection.password"/>
-        </properties>
+            <property name="javax.persistence.schema-generation.create-databaseschemas" value="true"/>
+         </properties>
     </persistence-unit>
 </persistence>
