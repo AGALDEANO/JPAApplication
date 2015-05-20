@@ -8,7 +8,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "sport", schema = "", catalog = "cerisaie")
-public class SportEntity {
+public class Sport {
     private int codeSport;
     private String libelleSport;
     private String uniteTpsSport;
@@ -59,7 +59,7 @@ public class SportEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        SportEntity that = (SportEntity) o;
+        Sport that = (Sport) o;
 
         if (codeSport != that.codeSport) return false;
         if (Float.compare(that.tarifUnite, tarifUnite) != 0) return false;

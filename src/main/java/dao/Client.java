@@ -8,7 +8,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "client", schema = "", catalog = "cerisaie")
-public class ClientEntity {
+public class Client {
     private int numCli;
     private String nomCli;
     private String adrRueCli;
@@ -92,7 +92,7 @@ public class ClientEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ClientEntity that = (ClientEntity) o;
+        Client that = (Client) o;
 
         if (numCli != that.numCli) return false;
         if (nomCli != null ? !nomCli.equals(that.nomCli) : that.nomCli != null) return false;

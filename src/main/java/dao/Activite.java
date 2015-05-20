@@ -1,21 +1,23 @@
 package dao;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import java.io.Serializable;
+import javax.persistence.*;
 import java.sql.Date;
 
 /**
  * @author Alexandre
  *         20/05/2015
  */
-public class ActiviteEntityPK implements Serializable {
+@Entity
+@Table(name = "activite", schema = "", catalog = "cerisaie")
+@IdClass(ActivitePK.class)
+public class Activite {
     private int codeSport;
     private Date dateJour;
     private int numSej;
+    private Integer nbloc;
 
-    @Column(name = "CodeSport")
     @Id
+    @Column(name = "CodeSport")
     public int getCodeSport() {
         return codeSport;
     }
@@ -24,8 +26,8 @@ public class ActiviteEntityPK implements Serializable {
         this.codeSport = codeSport;
     }
 
-    @Column(name = "DateJour")
     @Id
+    @Column(name = "DateJour")
     public Date getDateJour() {
         return dateJour;
     }
@@ -34,8 +36,8 @@ public class ActiviteEntityPK implements Serializable {
         this.dateJour = dateJour;
     }
 
-    @Column(name = "NumSej")
     @Id
+    @Column(name = "NumSej")
     public int getNumSej() {
         return numSej;
     }
@@ -44,16 +46,27 @@ public class ActiviteEntityPK implements Serializable {
         this.numSej = numSej;
     }
 
+    @Basic
+    @Column(name = "NBLOC")
+    public Integer getNbloc() {
+        return nbloc;
+    }
+
+    public void setNbloc(Integer nbloc) {
+        this.nbloc = nbloc;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ActiviteEntityPK that = (ActiviteEntityPK) o;
+        Activite that = (Activite) o;
 
         if (codeSport != that.codeSport) return false;
         if (numSej != that.numSej) return false;
         if (dateJour != null ? !dateJour.equals(that.dateJour) : that.dateJour != null) return false;
+        if (nbloc != null ? !nbloc.equals(that.nbloc) : that.nbloc != null) return false;
 
         return true;
     }
@@ -63,6 +76,7 @@ public class ActiviteEntityPK implements Serializable {
         int result = codeSport;
         result = 31 * result + (dateJour != null ? dateJour.hashCode() : 0);
         result = 31 * result + numSej;
+        result = 31 * result + (nbloc != null ? nbloc.hashCode() : 0);
         return result;
     }
 }

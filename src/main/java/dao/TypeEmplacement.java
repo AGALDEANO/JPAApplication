@@ -8,7 +8,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "type_emplacement", schema = "", catalog = "cerisaie")
-public class TypeEmplacementEntity {
+public class TypeEmplacement {
     private int codeTypeE;
     private String libtypepl;
     private float tariftypepl;
@@ -48,7 +48,7 @@ public class TypeEmplacementEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        TypeEmplacementEntity that = (TypeEmplacementEntity) o;
+        TypeEmplacement that = (TypeEmplacement) o;
 
         if (codeTypeE != that.codeTypeE) return false;
         if (Float.compare(that.tariftypepl, tariftypepl) != 0) return false;

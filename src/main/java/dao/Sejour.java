@@ -9,7 +9,7 @@ import java.sql.Date;
  */
 @Entity
 @Table(name = "sejour", schema = "", catalog = "cerisaie")
-public class SejourEntity {
+public class Sejour {
     private int numSej;
     private Date datedebSej;
     private Date dateFinSej;
@@ -60,7 +60,7 @@ public class SejourEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        SejourEntity that = (SejourEntity) o;
+        Sejour that = (Sejour) o;
 
         if (numSej != that.numSej) return false;
         if (datedebSej != null ? !datedebSej.equals(that.datedebSej) : that.datedebSej != null) return false;
