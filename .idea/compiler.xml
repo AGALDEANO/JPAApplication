@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="JPAApplication" />
+        <module name="JPAClient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="JPAApplication" target="1.5" />
+      <module name="JPAClient" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
